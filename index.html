@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Previdenciário do Zero</title>
+
+  <style>
+    :root {
+      --azul: #071b3d;
+      --azul-2: #0e2a5a;
+      --dourado: #c9a646;
+      --fundo: #f7f8fb;
+      --branco: #ffffff;
+      --texto: #1f2937;
+      --muted: #6b7280;
+      --verde: #25d366;
+      --borda: #e5e7eb;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: var(--fundo);
+      color: var(--texto);
+      line-height: 1.6;
+    }
+
+    section {
+      padding: 80px 8%;
+    }
+
+    h1 {
+      font-size: 54px;
+      line-height: 1.05;
+      color: var(--azul);
+      margin-bottom: 22px;
+    }
+
+    h2 {
+      font-size: 34px;
+      color: var(--azul);
+      margin-bottom: 18px;
+    }
+
+    h3 {
+      color: var(--azul);
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 18px;
+      color: var(--texto);
+    }
+
+    .topbar {
+      background: var(--branco);
+      padding: 18px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--borda);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .course-logo {
+      width: 105px;
+      height: auto;
+      border-radius: 12px;
+      display: block;
+    }
+
+    .topbar a {
+      color: var(--azul);
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .hero {
+      background: linear-gradient(180deg, #ffffff 0%, #f7f8fb 100%);
+      min-height: 86vh;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .tag {
+      display: inline-block;
+      background: rgba(201, 166, 70, 0.14);
+      color: var(--azul);
+      border: 1px solid rgba(201, 166, 70, 0.35);
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-weight: bold;
+      font-size: 14px;
+      margin-bottom: 22px;
+    }
+
+    .highlight {
+      color: var(--dourado);
+    }
+
+    .subtitle {
+      max-width: 680px;
+      font-size: 21px;
+      color: var(--muted);
+      margin-bottom: 30px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 16px 28px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background: var(--azul);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--azul-2);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border: 1px solid var(--azul);
+      color: var(--azul);
+      background: transparent;
+    }
+
+    .btn-gold {
+      background: var(--dourado);
+      color: var(--azul);
+    }
+
+    .btn-whatsapp {
+      background: var(--verde);
+      color: white;
+    }
+
+    .microcopy {
+      font-size: 15px;
+      color: var(--muted);
+    }
+
+    .hero-card {
+      background: var(--branco);
+      border: 1px solid var(--borda);
+      box-shadow: 0 20px 55px rgba(7, 27, 61, 0.08);
+      border-radius: 26px;
+      padding: 28px;
+      max-width: 360px;
+      margin-left: auto;
+      text-align: center;
+    }
+
+    .hero-card img {
+      width: 170px;
+      height: 170px;
+      object-fit: contain;
+      border-radius: 20px;
+      margin-bottom: 22px;
+    }
+
+    .hero-card h3 {
+      font-size: 24px;
+    }
+
+    .hero-card p {
+      font-size: 16px;
+      color: var(--muted);
+    }
+
+    .white {
+      background: var(--branco);
+    }
+
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    .section-head {
+      max-width: 760px;
+      margin-bottom: 36px;
+    }
+
+    .section-head p {
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--branco);
+      border: 1px solid var(--borda);
+      border-radius: 18px;
+      padding: 26px;
+      box-shadow: 0 10px 30px rgba(7, 27, 61, 0.04);
+    }
+
+    .white .card {
+      background: var(--fundo);
+    }
+
+    .card ul {
+      list-style: none;
+    }
+
+    .card li {
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    .card li::before {
+      content: "✓ ";
+      color: var(--dourado);
+      font-weight: bold;
+    }
+
+    .audience-card {
+      min-height: 135px;
+    }
+
+    .story {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 52px;
+      align-items: center;
+    }
+
+    .teacher-photo {
+      width: 220px;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 24px;
+      box-shadow: 0 18px 45px rgba(7, 27, 61, 0.12);
+    }
+
+    .teacher-text p {
+      margin-bottom: 15px;
+      color: var(--texto);
+    }
+
+    .authority {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+
+    .pill {
+      background: rgba(7, 27, 61, 0.06);
+      border: 1px solid var(--borda);
+      color: var(--azul);
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .objection {
+      background: var(--branco);
+      border: 1px solid var(--borda);
+      border-left: 4px solid var(--dourado);
+      border-radius: 16px;
+      padding: 22px;
+      margin-bottom: 16px;
+    }
+
+    .offer {
+      background: var(--azul);
+      color: white;
+      border-radius: 28px;
+      padding: 48px;
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+      box-shadow: 0 22px 60px rgba(7, 27, 61, 0.22);
+    }
+
+    .offer h2,
+    .offer p {
+      color: white;
+    }
+
+    .price-old {
+      text-decoration: line-through;
+      opacity: 0.68;
+      font-size: 22px;
+      margin-top: 12px;
+    }
+
+    .price {
+      color: var(--dourado);
+      font-size: 62px;
+      font-weight: 800;
+      margin: 4px 0 16px;
+    }
+
+    .bonus {
+      border: 1px solid rgba(201, 166, 70, 0.45);
+      background: rgba(201, 166, 70, 0.08);
+    }
+
+    .whatsapp-section {
+      background: var(--branco);
+      text-align: center;
+    }
+
+    .final {
+      background: linear-gradient(135deg, var(--azul), #020617);
+      text-align: center;
+    }
+
+    .final h2,
+    .final p {
+      color: white;
+    }
+
+    .whatsapp-fixed {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      background: var(--verde);
+      color: white;
+      padding: 14px 18px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.22);
+      z-index: 999;
+    }
+
+    footer {
+      background: #020617;
+      color: white;
+      text-align: center;
+      padding: 26px 8%;
+      font-size: 14px;
+    }
+
+    footer p {
+      color: white;
+      font-size: 14px;
+    }
+
+    @media (max-width: 900px) {
+      section {
+        padding: 58px 6%;
+      }
+
+      .topbar {
+        padding: 14px 6%;
+      }
+
+      .course-logo {
+        width: 82px;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        min-height: auto;
+      }
+
+      h1 {
+        font-size: 40px;
+      }
+
+      h2 {
+        font-size: 28px;
+      }
+
+      .subtitle {
+        font-size: 18px;
+      }
+
+      .hero-actions {
+        justify-content: center;
+      }
+
+      .hero-card {
+        margin: 0 auto;
+        max-width: 300px;
+      }
+
+      .hero-card img {
+        width: 135px;
+        height: 135px;
+      }
+
+      .story {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .teacher-photo {
+        width: 190px;
+        height: 245px;
+        margin: 0 auto;
+      }
+
+      .authority {
+        justify-content: center;
+      }
+
+      .offer {
+        padding: 34px 22px;
+      }
+
+      .price {
+        font-size: 48px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <a class="whatsapp-fixed" href="https://wa.me/5582991213400" target="_blank">
+    WhatsApp
+  </a>
+
+  <header class="topbar">
+    <img
+      class="course-logo"
+      src="logo-curso.png"
+      alt="Logo Previdenciário do Zero"
+    />
+
+    <a href="#oferta">Garantir acesso</a>
+  </header>
+
+  <section class="hero">
+    <div>
+      <span class="tag">Curso de entrada • 21 aulas gravadas</span>
+
+      <h1>
+        Previdenciário <span class="highlight">do Zero</span>
+      </h1>
+
+      <p class="subtitle">
+        A formação essencial para quem quer começar no Direito Previdenciário
+        com clareza, segurança e uma base sólida para avançar na prática.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#oferta" class="btn btn-primary">Quero começar agora</a>
+        <a href="#duvidas" class="btn btn-outline">Tirar dúvidas no WhatsApp</a>
+      </div>
+
+      <p class="microcopy">
+        Ideal para advogados iniciantes, bacharéis, estudantes e profissionais que desejam entender o RGPS.
+      </p>
+    </div>
+
+    <div class="hero-card">
+      <img
+        src="C:\Users\ponte\OneDrive\Imagens\ChatGPT Image 5_06_2026, 14_14_57.png"
+        alt="Logo do curso Previdenciário do Zero"
+      />
+
+      <h3>Comece pela base certa</h3>
+      <p>
+        Segurados, dependentes, carência, qualidade de segurado,
+        contribuições e tempo de contribuição explicados em sequência lógica.
+      </p>
+    </div>
+  </section>
+
+  <section class="white">
+    <div class="container">
+      <div class="section-head">
+        <h2>Você sente que o Previdenciário parece confuso?</h2>
+        <p>
+          Muitos advogados tentam começar pela prática, mas travam porque ainda
+          não dominam os fundamentos do sistema previdenciário.
+        </p>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Sem base</h3>
+          <p>Fica difícil entender benefícios, pedidos administrativos e análise de documentos.</p>
+        </div>
+
+        <div class="card">
+          <h3>Sem método</h3>
+          <p>O estudo vira uma sequência de conteúdos soltos, sem conexão entre os temas.</p>
+        </div>
+
+        <div class="card">
+          <h3>Sem segurança</h3>
+          <p>A insegurança aparece no atendimento, na captação e na conversa com o cliente.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <h2>O que você vai aprender</h2>
+        <p>
+          Um percurso introdutório, objetivo e organizado para compreender a lógica do RGPS.
+        </p>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <ul>
+            <li>Noções iniciais sobre Previdência Social</li>
+            <li>Estrutura do RGPS</li>
+            <li>Seguridade Social</li>
+            <li>Filiação e inscrição</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <ul>
+            <li>Segurados obrigatórios</li>
+            <li>Empregado</li>
+            <li>Empregado doméstico</li>
+            <li>Trabalhador avulso</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <ul>
+            <li>Contribuinte individual</li>
+            <li>Segurado especial</li>
+            <li>Segurado facultativo</li>
+            <li>Dependentes</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <ul>
+            <li>Qualidade de segurado</li>
+            <li>Período de graça</li>
+            <li>Contribuições previdenciárias</li>
+            <li>Tempo de contribuição e carência</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="white">
+    <div class="container">
+      <div class="section-head">
+        <h2>Para quem é este curso?</h2>
+        <p>
+          O Previdenciário do Zero foi criado para quem precisa organizar os fundamentos antes de avançar para a prática.
+        </p>
+      </div>
+
+      <div class="grid">
+        <div class="card audience-card">
+          <h3>Advogados iniciantes</h3>
+          <p>Especialmente quem acabou de tirar a OAB e ainda não sabe por onde começar.</p>
+        </div>
+
+        <div class="card audience-card">
+          <h3>Advogados de outras áreas</h3>
+          <p>Para quem atua em trabalhista, cível ou consumidor e quer migrar para o Previdenciário.</p>
+        </div>
+
+        <div class="card audience-card">
+          <h3>Estudantes e bacharéis</h3>
+          <p>Para quem deseja sair da teoria solta e entender a estrutura previdenciária.</p>
+        </div>
+
+        <div class="card audience-card">
+          <h3>Profissionais inseguros</h3>
+          <p>Para quem quer atender melhor clientes com dúvidas sobre INSS.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container story">
+      <img
+        class="teacher-photo"
+        src="foto-paulo.jpg"
+        alt="Paulo Henrique Maranhão Pontes"
+      />
+
+      <div class="teacher-text">
+        <h2>Quem será seu professor?</h2>
+
+        <p>
+          Meu nome é <strong>Paulo Henrique Maranhão Pontes</strong>, advogado inscrito na
+          <strong>OAB/AL nº 21.328</strong>.
+        </p>
+
+        <p>
+          Ao longo da minha trajetória, aprofundei meus estudos no sistema previdenciário
+          brasileiro e também exerço atuação em julgamento administrativo previdenciário,
+          analisando recursos e processos relacionados a benefícios do INSS.
+        </p>
+
+        <p>
+          Percebi que muitos profissionais querem atuar no Previdenciário, mas começam
+          pela prática sem dominar os fundamentos. Este curso foi criado para resolver
+          exatamente essa lacuna.
+        </p>
+
+        <div class="authority">
+          <span class="pill">Advogado</span>
+          <span class="pill">OAB/AL 21.328</span>
+          <span class="pill">Atuação previdenciária</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="white">
+    <div class="container">
+      <div class="section-head">
+        <h2>Objeções comuns</h2>
+        <p>
+          Antes de decidir, veja se alguma dessas dúvidas também passa pela sua cabeça.
+        </p>
+      </div>
+
+      <div class="objection">
+        <h3>“Eu nunca estudei Previdenciário.”</h3>
+        <p>Ótimo. O curso foi criado justamente para quem está começando.</p>
+      </div>
+
+      <div class="objection">
+        <h3>“Tenho medo de não conseguir acompanhar.”</h3>
+        <p>As aulas seguem uma sequência lógica, progressiva e didática.</p>
+      </div>
+
+      <div class="objection">
+        <h3>“Não tenho experiência prática.”</h3>
+        <p>Antes da prática, você precisa construir a base. Esse é o primeiro passo.</p>
+      </div>
+
+      <div class="objection">
+        <h3>“Será que o Previdenciário é para mim?”</h3>
+        <p>Você só descobrirá quando finalmente compreender como o sistema funciona.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <h2>O que está incluído</h2>
+      </div>
+
+      <div class="grid">
+        <div class="card">Acesso imediato ao conteúdo</div>
+        <div class="card">21 aulas gravadas</div>
+        <div class="card">Acesso por 12 meses</div>
+        <div class="card">Certificado de conclusão</div>
+      </div>
+
+      <br />
+
+      <div class="card bonus">
+        <h3>Bônus: O caminho para os primeiros honorários previdenciários</h3>
+        <p>
+          Uma aula extra para entender o papel do CNIS, PRISMA, atendimento previdenciário,
+          oportunidades de atuação e próximos passos para avançar na área.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="oferta" class="white">
+    <div class="offer">
+      <h2>Oferta de lançamento</h2>
+
+      <p class="price-old">De R$ 297,00</p>
+      <div class="price">R$ 97,00</div>
+
+      <p>Pagamento único. Acesso imediato.</p>
+
+      <br />
+
+      <a href="LINK-DO-CHECKOUT" class="btn btn-gold">
+        Quero garantir meu acesso
+      </a>
+    </div>
+  </section>
+
+  <section id="duvidas" class="whatsapp-section">
+    <div class="container">
+      <h2>Ainda ficou com dúvidas?</h2>
+
+      <p>
+        Fale pelo WhatsApp antes de fazer sua inscrição. O atendimento é direto
+        para esclarecer dúvidas sobre o curso, acesso, conteúdo e próxima etapa.
+      </p>
+
+      <br />
+
+      <a href="https://wa.me/5582991213400" target="_blank" class="btn btn-whatsapp">
+        Falar com atendimento especializado
+      </a>
+    </div>
+  </section>
+
+  <section class="final">
+    <div class="container">
+      <h2>Primeiro a base. Depois a prática.</h2>
+
+      <p>
+        O Previdenciário do Zero é a porta de entrada para sua jornada no Direito
+        Previdenciário e a preparação ideal para avançar depois para a Mentoria Cosmos Previdenciário.
+      </p>
+
+      <br />
+
+      <a href="#oferta" class="btn btn-gold">Começar agora</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>PH Pontes Advocacia | Paulo Henrique Maranhão Pontes | OAB/AL 21.328</p>
+    <p>© 2026 - Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>
