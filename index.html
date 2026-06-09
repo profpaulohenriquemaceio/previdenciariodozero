@@ -1,1082 +1,1478 @@
-```html
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1323420511872784');
-fbq('track', 'PageView');
-</script>
-
-<noscript>
-  <img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=1323420511872784&ev=PageView&noscript=1"/>
-</noscript>
-<!-- End Meta Pixel Code -->
-
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-
-<title>Previdenciário do Zero | Formação essencial em Direito Previdenciário</title>
-
-<meta name="description" content="A formação essencial para quem quer começar no Direito Previdenciário com clareza, segurança e uma base sólida para avançar na prática." />
-
-<meta property="og:title" content="Previdenciário do Zero" />
-<meta property="og:description" content="21 aulas gravadas para compreender a lógica do RGPS e começar no Direito Previdenciário pela base certa." />
-<meta property="og:type" content="website" />
-<meta name="theme-color" content="#050505" />
-
-<style>
-:root{
-  --bg:#050505;
-  --bg-soft:#0b0b0d;
-  --card:#111114;
-  --card-2:#17171b;
-  --text:#f5f5f7;
-  --muted:#a1a1aa;
-  --muted-2:#d2d2d7;
-  --line:rgba(255,255,255,.10);
-  --gold:#d7b36a;
-  --gold-2:#f1d99a;
-  --blue:#2997ff;
-  --radius:28px;
-  --shadow:0 24px 90px rgba(0,0,0,.45);
-  --max:1180px;
-}
-
-*{
-  box-sizing:border-box;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
-body{
-  margin:0;
-  background:
-    radial-gradient(circle at 75% 0%, rgba(215,179,106,.16), transparent 34%),
-    radial-gradient(circle at 20% 10%, rgba(41,151,255,.14), transparent 28%),
-    var(--bg);
-  color:var(--text);
-  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text",Inter,Segoe UI,Roboto,Arial,sans-serif;
-  letter-spacing:-.015em;
-}
-
-a{
-  color:inherit;
-  text-decoration:none;
-}
-
-img{
-  max-width:100%;
-  display:block;
-}
-
-/* NAV */
-.nav{
-  position:sticky;
-  top:0;
-  z-index:50;
-  backdrop-filter:saturate(180%) blur(22px);
-  background:rgba(5,5,5,.72);
-  border-bottom:1px solid var(--line);
-}
-
-.nav-inner{
-  max-width:var(--max);
-  margin:auto;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:14px 22px;
-}
-
-.brand{
-  display:flex;
-  gap:10px;
-  align-items:center;
-  font-weight:700;
-  font-size:15px;
-  color:#fff;
-}
-
-.brand-mark{
-  width:30px;
-  height:30px;
-  border-radius:10px;
-  background:linear-gradient(135deg,var(--gold),#7a5522);
-  display:grid;
-  place-items:center;
-  color:#090909;
-  font-weight:900;
-}
-
-.nav-actions{
-  display:flex;
-  gap:10px;
-  align-items:center;
-}
-
-.nav-actions a{
-  font-size:13px;
-  color:var(--muted-2);
-}
-
-/* BUTTONS */
-.btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap:10px;
-  border-radius:999px;
-  padding:14px 22px;
-  font-weight:700;
-  font-size:15px;
-  transition:.25s ease;
-  white-space:nowrap;
-  border:1px solid transparent;
-}
-
-.btn-primary{
-  background:#fff;
-  color:#050505;
-  box-shadow:0 14px 40px rgba(255,255,255,.10);
-}
-
-.btn-primary:hover{
-  transform:translateY(-2px);
-  background:var(--gold-2);
-}
-
-.btn-secondary{
-  border-color:var(--line);
-  color:#fff;
-  background:rgba(255,255,255,.04);
-}
-
-.btn-secondary:hover{
-  background:rgba(255,255,255,.09);
-  transform:translateY(-2px);
-}
-
-/* GLOBAL */
-.wrap{
-  max-width:var(--max);
-  margin:0 auto;
-  padding:0 22px;
-}
-
-section{
-  padding:92px 0;
-  border-top:1px solid var(--line);
-}
-
-.center{
-  text-align:center;
-  max-width:850px;
-  margin:0 auto 46px;
-}
-
-.kicker{
-  color:var(--gold-2);
-  font-size:13px;
-  text-transform:uppercase;
-  font-weight:850;
-  letter-spacing:.13em;
-  margin-bottom:14px;
-}
-
-.eyebrow{
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-  color:var(--gold-2);
-  font-size:13px;
-  font-weight:800;
-  text-transform:uppercase;
-  letter-spacing:.12em;
-  margin-bottom:18px;
-}
-
-.dot{
-  width:7px;
-  height:7px;
-  border-radius:50%;
-  background:var(--gold);
-}
-
-.title{
-  font-size:clamp(38px,5vw,72px);
-  line-height:.98;
-  margin:0 0 18px;
-  letter-spacing:-.06em;
-}
-
-.lead{
-  font-size:21px;
-  line-height:1.35;
-  color:var(--muted-2);
-  margin:0;
-}
-
-/* HERO */
-.hero{
-  min-height:92vh;
-  display:grid;
-  align-items:center;
-  padding:76px 0 60px;
-  position:relative;
-  overflow:hidden;
-}
-
-.hero-grid{
-  display:grid;
-  grid-template-columns:1.05fr .95fr;
-  gap:52px;
-  align-items:center;
-}
-
-h1{
-  font-size:clamp(54px,8vw,104px);
-  line-height:.92;
-  margin:0 0 24px;
-  letter-spacing:-.075em;
-  font-weight:800;
-}
-
-.hero p{
-  font-size:clamp(20px,2.4vw,28px);
-  line-height:1.18;
-  color:var(--muted-2);
-  max-width:760px;
-  margin:0 0 30px;
-}
-
-.hero-actions{
-  display:flex;
-  gap:14px;
-  flex-wrap:wrap;
-  margin-bottom:28px;
-}
-
-.micro{
-  color:var(--muted);
-  font-size:15px;
-  line-height:1.5;
-  max-width:560px;
-}
-
-/* HERO VISUAL */
-.visual-card{
-  border:1px solid var(--line);
-  border-radius:42px;
-  overflow:hidden;
-  background:linear-gradient(180deg,#1a1a20,#08080a);
-  box-shadow:var(--shadow);
-  position:relative;
-  min-height:610px;
-}
-
-.visual-card:before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:radial-gradient(circle at 50% 12%,rgba(215,179,106,.24),transparent 42%);
-  pointer-events:none;
-  z-index:1;
-}
-
-.logo-area{
-  height:610px;
-  background:
-    radial-gradient(circle at center, rgba(215,179,106,.14), transparent 45%),
-    linear-gradient(160deg,#1d1d22,#070707 58%);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  position:relative;
-  padding:52px 44px 150px;
-}
-
-.logo-curso{
-  width:88%;
-  max-width:430px;
-  height:auto;
-  max-height:390px;
-  object-fit:contain;
-  object-position:center;
-  position:relative;
-  z-index:2;
-  filter:drop-shadow(0 18px 44px rgba(0,0,0,.55));
-}
-
-.floating-price{
-  position:absolute;
-  left:22px;
-  right:22px;
-  bottom:22px;
-  z-index:4;
-  border:1px solid rgba(255,255,255,.13);
-  background:rgba(13,13,16,.72);
-  backdrop-filter:blur(24px);
-  border-radius:28px;
-  padding:22px;
-  display:flex;
-  justify-content:space-between;
-  align-items:end;
-  gap:18px;
-}
-
-.old{
-  color:var(--muted);
-  text-decoration:line-through;
-  font-size:15px;
-}
-
-.price{
-  font-size:48px;
-  font-weight:850;
-  letter-spacing:-.06em;
-}
-
-.pay{
-  color:var(--muted);
-  font-size:13px;
-}
-
-/* CARDS */
-.cards{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
-}
-
-.card{
-  background:linear-gradient(180deg,var(--card),#0b0b0d);
-  border:1px solid var(--line);
-  border-radius:var(--radius);
-  padding:30px;
-  min-height:210px;
-  box-shadow:0 18px 55px rgba(0,0,0,.22);
-}
-
-.card h3{
-  margin:0 0 12px;
-  font-size:24px;
-  letter-spacing:-.04em;
-}
-
-.card p{
-  margin:0;
-  color:var(--muted-2);
-  font-size:17px;
-  line-height:1.45;
-}
-
-.num{
-  color:var(--gold-2);
-  font-size:14px;
-  font-weight:850;
-  margin-bottom:24px;
-}
-
-/* SPLIT */
-.split{
-  display:grid;
-  grid-template-columns:.92fr 1.08fr;
-  gap:24px;
-  align-items:stretch;
-}
-
-.panel{
-  background:linear-gradient(180deg,#151519,#09090a);
-  border:1px solid var(--line);
-  border-radius:38px;
-  padding:42px;
-  box-shadow:var(--shadow);
-}
-
-.panel h2{
-  font-size:clamp(36px,4vw,62px);
-  line-height:1;
-  margin:0 0 18px;
-  letter-spacing:-.06em;
-}
-
-.panel p{
-  color:var(--muted-2);
-  font-size:19px;
-  line-height:1.45;
-}
-
-.modules{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:12px;
-}
-
-.module{
-  border:1px solid var(--line);
-  border-radius:20px;
-  padding:18px;
-  background:rgba(255,255,255,.035);
-  color:#fff;
-  font-weight:650;
-}
-
-.module span{
-  display:block;
-  color:var(--muted);
-  font-size:13px;
-  font-weight:500;
-  margin-top:5px;
-}
-
-/* AUDIENCE */
-.audience{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:16px;
-}
-
-.audience .card{
-  min-height:250px;
-}
-
-.badge{
-  width:42px;
-  height:42px;
-  border-radius:14px;
-  background:rgba(215,179,106,.13);
-  display:grid;
-  place-items:center;
-  color:var(--gold-2);
-  font-weight:900;
-  margin-bottom:22px;
-}
-
-/* TEACHER */
-.teacher{
-  display:grid;
-  grid-template-columns:.85fr 1.15fr;
-  gap:34px;
-  align-items:center;
-}
-
-.teacher-photo{
-  border-radius:38px;
-  min-height:560px;
-  overflow:hidden;
-  border:1px solid var(--line);
-  background:
-    radial-gradient(circle at 50% 0%, rgba(215,179,106,.20), transparent 46%),
-    linear-gradient(160deg,#202027,#0b0b0d);
-  box-shadow:var(--shadow);
-  position:relative;
-  display:flex;
-  align-items:flex-end;
-  justify-content:center;
-  padding:0;
-}
-
-.foto-professor{
-  width:100%;
-  height:560px;
-  object-fit:cover;
-  object-position:center top;
-}
-
-.teacher-copy h2{
-  font-size:clamp(40px,5vw,74px);
-  line-height:.95;
-  margin:0 0 22px;
-  letter-spacing:-.06em;
-}
-
-.teacher-copy p{
-  font-size:20px;
-  line-height:1.45;
-  color:var(--muted-2);
-}
-
-.chips{
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-  margin-top:24px;
-}
-
-.chip{
-  border:1px solid var(--line);
-  background:rgba(255,255,255,.05);
-  border-radius:999px;
-  padding:10px 14px;
-  color:var(--muted-2);
-  font-size:14px;
-  font-weight:700;
-}
-
-/* FAQ */
-.faq{
-  max-width:900px;
-  margin:0 auto;
-}
-
-.faq-item{
-  border-bottom:1px solid var(--line);
-  padding:26px 0;
-}
-
-.faq-item h3{
-  font-size:24px;
-  margin:0 0 10px;
-  letter-spacing:-.035em;
-}
-
-.faq-item p{
-  font-size:18px;
-  line-height:1.45;
-  color:var(--muted-2);
-  margin:0;
-}
-
-/* OFFER */
-.offer{
-  padding:110px 0;
-}
-
-.offer-box{
-  border-radius:46px;
-  border:1px solid rgba(255,255,255,.13);
-  background:
-    radial-gradient(circle at 50% 0%,rgba(215,179,106,.24),transparent 38%),
-    linear-gradient(180deg,#17171b,#08080a);
-  box-shadow:var(--shadow);
-  padding:56px;
-  text-align:center;
-}
-
-.offer-box h2{
-  font-size:clamp(44px,6vw,84px);
-  line-height:.94;
-  margin:0 0 15px;
-  letter-spacing:-.07em;
-}
-
-.offer-box p{
-  color:var(--muted-2);
-  font-size:20px;
-}
-
-.offer-price{
-  margin:28px 0;
-}
-
-.offer-price .old{
-  font-size:20px;
-}
-
-.offer-price .price{
-  font-size:clamp(72px,10vw,132px);
-  line-height:.86;
-}
-
-.included{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:12px;
-  margin:34px 0;
-}
-
-.included div{
-  border:1px solid var(--line);
-  border-radius:18px;
-  background:rgba(255,255,255,.04);
-  padding:16px;
-  color:var(--muted-2);
-  font-weight:700;
-}
-
-/* FINAL */
-.final{
-  padding:96px 0 54px;
-  text-align:center;
-}
-
-.final h2{
-  font-size:clamp(42px,6vw,86px);
-  line-height:.95;
-  margin:0 auto 22px;
-  letter-spacing:-.07em;
-  max-width:900px;
-}
-
-.final p{
-  max-width:780px;
-  margin:0 auto 28px;
-  color:var(--muted-2);
-  font-size:21px;
-  line-height:1.35;
-}
-
-footer{
-  border-top:1px solid var(--line);
-  padding:26px 22px;
-  color:var(--muted);
-  font-size:13px;
-  text-align:center;
-}
-
-/* RESPONSIVO */
-@media(max-width:920px){
-  .hero-grid,
-  .split,
-  .teacher{
-    grid-template-columns:1fr;
-  }
-
-  .cards,
-  .audience,
-  .included{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .visual-card{
-    min-height:520px;
-  }
-
-  .logo-area{
-    height:520px;
-    padding:44px 32px 140px;
-  }
-
-  .floating-price{
-    align-items:center;
-  }
-
-  .nav-actions a:first-child{
-    display:none;
-  }
-
-  .foto-professor{
-    height:560px;
-    object-position:center top;
-  }
-}
-
-@media(max-width:620px){
-  section{
-    padding:68px 0;
-  }
-
-  .hero{
-    padding-top:56px;
-  }
-
-  h1{
-    font-size:clamp(48px,14vw,70px);
-  }
-
-  .cards,
-  .audience,
-  .included,
-  .modules{
-    grid-template-columns:1fr;
-  }
-
-  .btn{
-    width:100%;
-  }
-
-  .hero-actions{
-    gap:10px;
-  }
-
-  .panel,
-  .offer-box{
-    padding:28px;
-    border-radius:30px;
-  }
-
-  .visual-card{
-    min-height:auto;
-  }
-
-  .logo-area{
-    height:430px;
-    padding:36px 24px 120px;
-  }
-
-  .logo-curso{
-    width:92%;
-    max-height:260px;
-  }
-
-  .floating-price{
-    position:relative;
-    left:auto;
-    right:auto;
-    bottom:auto;
-    margin:18px;
-    flex-direction:column;
-    align-items:flex-start;
-  }
-
-  .teacher-photo{
-    min-height:440px;
-  }
-
-  .foto-professor{
-    height:440px;
-    object-fit:cover;
-    object-position:center top;
-  }
-
-  .nav-inner{
-    padding:12px 16px;
-  }
-
-  .brand span:last-child{
-    max-width:170px;
-    overflow:hidden;
-    text-overflow:ellipsis;
-    white-space:nowrap;
-  }
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Previdenciário do Zero - A formação essencial para quem quer começar no Direito Previdenciário com clareza, segurança e uma base sólida para avançar na prática.">
+    <meta name="keywords" content="Direito Previdenciário, RGPS, INSS, Curso Online, Formação Jurídica">
+    <meta name="author" content="Paulo Henrique Maranhão Pontes - OAB/AL 21.328">
+    <title>Previdenciário do Zero - Curso de Direito Previdenciário</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #C85A2D;
+            --primary-foreground: #FFF8F3;
+            --secondary: #F5E6D3;
+            --secondary-foreground: #5C4033;
+            --accent: #D4A574;
+            --accent-foreground: #2D1F14;
+            --background: #FFFBF7;
+            --foreground: #2D1F14;
+            --border: #E8D5C4;
+            --muted: #E8D5C4;
+            --muted-foreground: #8B6F47;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--background);
+            color: var(--foreground);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Lora', serif;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        @media (min-width: 640px) {
+            .container {
+                padding: 0 1.5rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .container {
+                padding: 0 2rem;
+            }
+        }
+
+        /* Header */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background-color: rgba(255, 251, 247, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 0;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 0.5rem;
+            background-color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-foreground);
+            font-weight: bold;
+            font-size: 1.125rem;
+        }
+
+        .logo-text h1 {
+            font-size: 1.25rem;
+            margin: 0;
+        }
+
+        .logo-text p {
+            font-size: 0.75rem;
+            color: rgba(45, 31, 20, 0.6);
+            margin: 0;
+        }
+
+        nav {
+            display: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        @media (min-width: 768px) {
+            nav {
+                display: flex;
+            }
+        }
+
+        nav a {
+            color: rgba(45, 31, 20, 0.7);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--foreground);
+        }
+
+        .header-buttons {
+            display: flex;
+            gap: 0.75rem;
+            align-items: center;
+        }
+
+        .btn {
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 150ms cubic-bezier(0.23, 1, 0.32, 1);
+            font-size: 0.875rem;
+        }
+
+        .btn:active {
+            transform: scale(0.97);
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--primary-foreground);
+        }
+
+        .btn-primary:hover {
+            background-color: #B84E24;
+        }
+
+        .btn-outline {
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            background-color: transparent;
+        }
+
+        .btn-outline:hover {
+            background-color: rgba(200, 90, 45, 0.1);
+        }
+
+        .btn-lg {
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            padding: 5rem 0;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url('https://d2xsxph8kpxj0f.cloudfront.net/310419663028979940/jTV3nTPax5B8Ukjed8N5C8/hero-background-J6R6ebU9VFrvFEjvkGu7hW.webp');
+            background-size: cover;
+            background-position: center;
+            z-index: 0;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right, rgba(200, 90, 45, 0.2), transparent);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        @media (min-width: 1024px) {
+            .hero-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .hero-left {
+            max-width: 40rem;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background-color: rgba(245, 230, 211, 0.8);
+            border-radius: 9999px;
+            margin-bottom: 1.5rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--secondary-foreground);
+        }
+
+        .hero h1 {
+            margin-bottom: 1.5rem;
+            color: var(--foreground);
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: rgba(45, 31, 20, 0.8);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .hero-description {
+            font-size: 1.125rem;
+            color: rgba(45, 31, 20, 0.7);
+            margin-bottom: 2rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        @media (min-width: 640px) {
+            .hero-buttons {
+                flex-direction: row;
+            }
+        }
+
+        .hero-right {
+            display: none;
+            justify-content: center;
+        }
+
+        @media (min-width: 1024px) {
+            .hero-right {
+                display: flex;
+            }
+        }
+
+        .hero-image {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .hero-image::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom right, rgba(200, 90, 45, 0.2), rgba(212, 165, 116, 0.2));
+            border-radius: 1.5rem;
+            filter: blur(3rem);
+        }
+
+        .hero-image img {
+            position: relative;
+            width: 100%;
+            height: auto;
+            border-radius: 1rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            object-fit: cover;
+        }
+
+        /* Sections */
+        section {
+            padding: 5rem 0;
+            scroll-margin-top: 80px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            max-width: 48rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .section-header h2 {
+            margin-bottom: 1.5rem;
+        }
+
+        .section-header p {
+            font-size: 1.125rem;
+            color: rgba(45, 31, 20, 0.7);
+        }
+
+        /* Problem Section */
+        .problem-section {
+            background: linear-gradient(to bottom, var(--background), rgba(245, 230, 211, 0.3));
+        }
+
+        .problems-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        @media (min-width: 768px) {
+            .problems-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .problem-card {
+            background-color: var(--primary-foreground);
+            border: 2px solid var(--border);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            transition: all 0.3s;
+        }
+
+        .problem-card:hover {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .problem-card-header {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .problem-icon {
+            width: 2rem;
+            height: 2rem;
+            color: var(--primary);
+            flex-shrink: 0;
+        }
+
+        .problem-card h3 {
+            margin-bottom: 0.75rem;
+        }
+
+        .problem-card p {
+            color: rgba(45, 31, 20, 0.7);
+        }
+
+        .solution-box {
+            background: linear-gradient(to right, rgba(200, 90, 45, 0.1), rgba(212, 165, 116, 0.1));
+            border: 2px solid rgba(200, 90, 45, 0.2);
+            border-radius: 2rem;
+            padding: 3rem;
+            text-align: center;
+        }
+
+        .solution-box h3 {
+            margin-bottom: 1rem;
+        }
+
+        .solution-box p {
+            color: rgba(45, 31, 20, 0.7);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Course Content Section */
+        .course-section {
+            background-color: var(--background);
+        }
+
+        .course-image {
+            margin-bottom: 4rem;
+            border-radius: 1.5rem;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .course-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .modules-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .modules-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .module-card {
+            background-color: var(--primary-foreground);
+            border: 2px solid var(--border);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            transition: all 0.3s;
+        }
+
+        .module-card:hover {
+            border-color: rgba(200, 90, 45, 0.5);
+        }
+
+        .module-number {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 0.75rem;
+            background-color: rgba(200, 90, 45, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .module-card h3 {
+            margin-bottom: 1rem;
+        }
+
+        .module-topics {
+            list-style: none;
+        }
+
+        .module-topics li {
+            display: flex;
+            gap: 0.75rem;
+            margin-bottom: 0.5rem;
+            color: rgba(45, 31, 20, 0.7);
+        }
+
+        .module-topics li::before {
+            content: '•';
+            color: var(--primary);
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        /* Target Audience Section */
+        .audience-section {
+            background-color: rgba(245, 230, 211, 0.3);
+        }
+
+        .audience-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .audience-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .audience-card {
+            background-color: var(--primary-foreground);
+            border: 2px solid var(--border);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            transition: all 0.3s;
+        }
+
+        .audience-card:hover {
+            border-color: rgba(200, 90, 45, 0.5);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .audience-icon {
+            width: 3.5rem;
+            height: 3.5rem;
+            border-radius: 0.75rem;
+            background-color: rgba(200, 90, 45, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .audience-icon svg {
+            width: 1.75rem;
+            height: 1.75rem;
+            color: var(--primary);
+        }
+
+        .audience-card h3 {
+            margin-bottom: 0.75rem;
+        }
+
+        .audience-card p {
+            color: rgba(45, 31, 20, 0.7);
+        }
+
+        /* Professor Section */
+        .professor-section {
+            background: linear-gradient(to bottom, var(--background), rgba(245, 230, 211, 0.2));
+        }
+
+        .professor-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        @media (min-width: 1024px) {
+            .professor-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .professor-image {
+            position: relative;
+            order: 2;
+        }
+
+        @media (min-width: 1024px) {
+            .professor-image {
+                order: 1;
+            }
+        }
+
+        .professor-image::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom right, rgba(200, 90, 45, 0.3), rgba(212, 165, 116, 0.3));
+            border-radius: 2rem;
+            filter: blur(2rem);
+        }
+
+        .professor-image img {
+            position: relative;
+            width: 100%;
+            height: auto;
+            border-radius: 1.5rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            object-fit: cover;
+        }
+
+        .professor-info {
+            order: 1;
+        }
+
+        @media (min-width: 1024px) {
+            .professor-info {
+                order: 2;
+            }
+        }
+
+        .professor-info h2 {
+            margin-bottom: 1.5rem;
+        }
+
+        .professor-text {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .professor-text p {
+            color: rgba(45, 31, 20, 0.8);
+        }
+
+        .credentials {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .credential-card {
+            background-color: rgba(200, 90, 45, 0.1);
+            border: 1px solid rgba(200, 90, 45, 0.3);
+            border-radius: 1rem;
+            padding: 1.5rem;
+        }
+
+        .credential-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .credential-icon {
+            width: 1.5rem;
+            height: 1.5rem;
+            color: var(--primary);
+        }
+
+        .credential-card strong {
+            color: var(--foreground);
+        }
+
+        .credential-card p {
+            font-size: 0.875rem;
+            color: rgba(45, 31, 20, 0.7);
+        }
+
+        /* Objections Section */
+        .objections-section {
+            background-color: rgba(245, 230, 211, 0.3);
+        }
+
+        .objections-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            max-width: 56rem;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 768px) {
+            .objections-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .objection-card {
+            background-color: var(--primary-foreground);
+            border: 2px solid var(--border);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            transition: all 0.3s;
+        }
+
+        .objection-card:hover {
+            border-color: rgba(200, 90, 45, 0.5);
+        }
+
+        .objection-header {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .objection-icon {
+            width: 1.5rem;
+            height: 1.5rem;
+            color: var(--primary);
+            flex-shrink: 0;
+        }
+
+        .objection-card h3 {
+            font-size: 1.125rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .objection-card p {
+            color: rgba(45, 31, 20, 0.7);
+        }
+
+        /* Benefits Section */
+        .benefits-section {
+            background-color: var(--background);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        @media (min-width: 640px) {
+            .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .benefits-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .benefit-card {
+            background-color: var(--primary-foreground);
+            border: 2px solid var(--border);
+            border-radius: 1.5rem;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .benefit-card:hover {
+            border-color: rgba(200, 90, 45, 0.5);
+        }
+
+        .benefit-icon {
+            width: 3rem;
+            height: 3rem;
+            background-color: rgba(200, 90, 45, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+        }
+
+        .benefit-icon svg {
+            width: 1.5rem;
+            height: 1.5rem;
+            color: var(--primary);
+        }
+
+        .benefit-card h3 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .benefit-card p {
+            font-size: 0.875rem;
+            color: rgba(45, 31, 20, 0.7);
+        }
+
+        .bonus-box {
+            background: linear-gradient(to right, rgba(200, 90, 45, 0.1), rgba(212, 165, 116, 0.1));
+            border: 2px solid rgba(200, 90, 45, 0.2);
+            border-radius: 2rem;
+            padding: 3rem;
+        }
+
+        .bonus-header {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .bonus-icon {
+            width: 2rem;
+            height: 2rem;
+            color: var(--primary);
+            flex-shrink: 0;
+        }
+
+        .bonus-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .bonus-box p {
+            font-size: 1.125rem;
+            color: rgba(45, 31, 20, 0.8);
+        }
+
+        /* Pricing Section */
+        .pricing-section {
+            background: linear-gradient(to bottom, rgba(245, 230, 211, 0.3), var(--background));
+        }
+
+        .pricing-card {
+            background-color: var(--primary-foreground);
+            border: 2px solid rgba(200, 90, 45, 0.3);
+            border-radius: 2rem;
+            padding: 3rem;
+            max-width: 40rem;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .discount-badge {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            background-color: var(--primary);
+            color: var(--primary-foreground);
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: bold;
+            font-size: 0.875rem;
+        }
+
+        .pricing-display {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .pricing-values {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .original-price {
+            font-size: 1.25rem;
+            color: rgba(45, 31, 20, 0.5);
+            text-decoration: line-through;
+        }
+
+        .final-price {
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .pricing-info {
+            font-size: 1.125rem;
+            color: rgba(45, 31, 20, 0.7);
+        }
+
+        .pricing-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .pricing-buttons .btn {
+            width: 100%;
+            justify-content: center;
+            padding: 1rem;
+            font-size: 1rem;
+        }
+
+        .trust-indicators {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.875rem;
+            color: rgba(45, 31, 20, 0.7);
+        }
+
+        @media (min-width: 640px) {
+            .trust-indicators {
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            .trust-indicators::before,
+            .trust-indicators::after {
+                content: '•';
+                color: var(--border);
+            }
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            justify-content: center;
+        }
+
+        .trust-icon {
+            width: 1.25rem;
+            height: 1.25rem;
+            color: var(--primary);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--foreground);
+            color: var(--primary-foreground);
+            padding: 4rem 0;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid rgba(255, 248, 243, 0.2);
+        }
+
+        @media (min-width: 768px) {
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .footer-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-foreground);
+        }
+
+        .footer-section p {
+            color: rgba(255, 248, 243, 0.8);
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-section .btn {
+            background-color: var(--primary-foreground);
+            color: var(--foreground);
+        }
+
+        .footer-section .btn:hover {
+            background-color: rgba(255, 248, 243, 0.9);
+        }
+
+        .footer-bottom {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            text-align: center;
+            font-size: 0.875rem;
+            color: rgba(255, 248, 243, 0.7);
+        }
+
+        @media (min-width: 640px) {
+            .footer-bottom {
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .footer-links a {
+            color: rgba(255, 248, 243, 0.7);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-foreground);
+        }
+
+        /* Utilities */
+        .text-center {
+            text-align: center;
+        }
+
+        .mb-4 {
+            margin-bottom: 1.5rem;
+        }
+
+        .mb-6 {
+            margin-bottom: 2.5rem;
+        }
+
+        .mt-4 {
+            margin-top: 1.5rem;
+        }
+
+        @media (max-width: 640px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.75rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .final-price {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
 </head>
-
 <body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">PH</div>
+                    <div class="logo-text">
+                        <h1>Previdenciário</h1>
+                        <p>do Zero</p>
+                    </div>
+                </div>
 
-<nav class="nav">
-  <div class="nav-inner">
-    <a class="brand" href="#top">
-      <span class="brand-mark">PZ</span>
-      <span>Previdenciário do Zero</span>
-    </a>
+                <nav>
+                    <a href="#course">Curso</a>
+                    <a href="#professor">Professor</a>
+                    <a href="#benefits">Benefícios</a>
+                    <a href="#pricing">Preço</a>
+                </nav>
 
-    <div class="nav-actions">
-      <a href="https://wa.me/5582991213400">WhatsApp</a>
-      <a class="btn btn-primary" href="https://hotmart.com/pt-br/marketplace/produtos/hagsxd-previdenciario-do-zero-l7vwd/U106159257S">
-        Garantir acesso
-      </a>
-    </div>
-  </div>
-</nav>
-
-<main id="top">
-
-<header class="hero">
-  <div class="wrap hero-grid">
-
-    <div>
-      <div class="eyebrow">
-        <span class="dot"></span>
-        21 aulas gravadas
-      </div>
-
-      <h1>Previdenciário do Zero</h1>
-
-      <p>
-        A formação essencial para quem quer começar no Direito Previdenciário com clareza,
-        segurança e uma base sólida para avançar na prática.
-      </p>
-
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="https://hotmart.com/pt-br/marketplace/produtos/hagsxd-previdenciario-do-zero-l7vwd/U106159257S">
-          Quero começar agora
-        </a>
-
-        <a class="btn btn-secondary" href="https://wa.me/5582991213400">
-          Tirar dúvidas no WhatsApp
-        </a>
-      </div>
-
-      <div class="micro">
-        Ideal para advogados iniciantes, bacharéis, estudantes e profissionais que desejam
-        entender o RGPS sem depender de conteúdos soltos.
-      </div>
-    </div>
-
-    <aside class="visual-card" aria-label="Imagem do curso">
-      <div class="logo-area">
-        <img
-          class="logo-curso"
-          src="https://github.com/profpaulohenriquemaceio/previdenciariodozero/blob/main/logo-curso.png?raw=true"
-          alt="Previdenciário do Zero">
-      </div>
-
-      <div class="floating-price">
-        <div>
-          <div class="old">De R$ 197,00</div>
-          <div class="price">R$ 47</div>
-          <div class="pay">Pagamento único. Acesso imediato.</div>
+                <div class="header-buttons">
+                    <a href="https://wa.me/5582991213400" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="display: none;">
+                        <span>💬</span> WhatsApp
+                    </a>
+                    <a href="https://hotmart.com/pt-br/marketplace/produtos/hagsxd-previdenciario-do-zero-l7vwd/U106159257S" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                        Garantir acesso
+                    </a>
+                </div>
+            </div>
         </div>
+    </header>
 
-        <a class="btn btn-primary" href="https://hotmart.com/pt-br/marketplace/produtos/hagsxd-previdenciario-do-zero-l7vwd/U106159257S">
-          Acessar
-        </a>
-      </div>
-    </aside>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-left">
+                    <div class="hero-badge">✓ 21 AULAS GRAVADAS</div>
+                    <h1>Previdenciário do Zero</h1>
+                    <p class="hero-subtitle">A formação essencial para quem quer começar no Direito Previdenciário com clareza, segurança e uma base sólida para avançar na prática.</p>
+                    <p class="hero-description">Ideal para advogados iniciantes, bacharéis, estudantes e profissionais que desejam entender o RGPS.</p>
+                    <div class="hero-buttons">
+                        <a href="https://hotmart.com/pt-br/marketplace/produtos/hagsxd-previdenciario-do-zero-l7vwd/U106159257S" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
+                            Quero começar agora →
+                        </a>
+                        <a href="https://wa.me/5582991213400" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-lg">
+                            💬 Tirar dúvidas no WhatsApp
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-right">
+                    <div class="hero-image">
+                        <img src="https://github.com/profpaulohenriquemaceio/previdenciariodozero/blob/main/foto-paulo.jpeg?raw=true" alt="Prof. Paulo Henrique">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  </div>
-</header>
+    <!-- Problem Section -->
+    <section class="problem-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Você sente que o Previdenciário parece confuso?</h2>
+                <p>Muitos advogados tentam começar pela prática, mas travam porque ainda não dominam os fundamentos do sistema previdenciário.</p>
+            </div>
 
-<section>
-  <div class="wrap">
-    <div class="center">
-      <div class="kicker">Comece pela base certa</div>
-      <h2 class="title">Antes da prática, você precisa entender a lógica.</h2>
-      <p class="lead">
-        Segurados, dependentes, carência, qualidade de segurado, contribuições e tempo de contribuição
-        explicados em sequência lógica.
-      </p>
-    </div>
+            <div class="problems-grid">
+                <div class="problem-card">
+                    <div class="problem-card-header">
+                        <svg class="problem-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+                        <h3>Sem base</h3>
+                    </div>
+                    <p>Fica difícil entender benefícios, pedidos administrativos e análise de documentos.</p>
+                </div>
 
-    <div class="cards">
-      <article class="card">
-        <div class="num">01</div>
-        <h3>Sem base</h3>
-        <p>Fica difícil entender benefícios, pedidos administrativos e análise de documentos.</p>
-      </article>
+                <div class="problem-card">
+                    <div class="problem-card-header">
+                        <svg class="problem-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+                        <h3>Sem método</h3>
+                    </div>
+                    <p>O estudo vira uma sequência de conteúdos soltos, sem conexão entre os temas.</p>
+                </div>
 
-      <article class="card">
-        <div class="num">02</div>
-        <h3>Sem método</h3>
-        <p>O estudo vira uma sequência de conteúdos soltos, sem conexão entre os temas.</p>
-      </article>
+                <div class="problem-card">
+                    <div class="problem-card-header">
+                        <svg class="problem-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+                        <h3>Sem segurança</h3>
+                    </div>
+                    <p>A insegurança aparece no atendimento, na captação e na conversa com o cliente.</p>
+                </div>
+            </div>
 
-      <article class="card">
-        <div class="num">03</div>
-        <h3>Sem segurança</h3>
-        <p>A insegurança aparece no atendimento, na captação e na conversa com o cliente.</p>
-      </article>
-    </div>
-  </div>
-</section>
+            <div class="solution-box">
+                <h3>A solução: Comece pela base certa</h3>
+                <p>Segurados, dependentes, carência, qualidade de segurado, contribuições e tempo de contribuição explicados em sequência lógica.</p>
+                <div style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; color: var(--primary); font-weight: 600;">
+                    <span>✓</span>
+                    <span>Estrutura progressiva e didática</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section>
-  <div class="wrap split">
+    <!-- Course Content Section -->
+    <section class="course-section" id="course">
+        <div class="container">
+            <div class="section-header">
+                <h2>O que você vai aprender</h2>
+                <p>Um percurso introdutório, objetivo e organizado para compreender a lógica do RGPS.</p>
+            </div>
 
-    <div class="panel">
-      <div class="kicker">O que você vai aprender</div>
-      <h2>Um percurso introdutório, objetivo e organizado.</h2>
-      <p>
-        O curso conduz você pelos fundamentos necessários para compreender a estrutura do RGPS
-        e avançar com mais segurança no Direito Previdenciário.
-      </p>
-    </div>
+            <div class="course-image">
+                <img src="https://github.com/profpaulohenriquemaceio/previdenciariodozero/blob/main/prev%20do%20zero.png?raw=true" alt="Estrutura do Curso">
+            </div>
 
-    <div class="panel modules">
-      <div class="module">Noções iniciais <span>Previdência Social</span></div>
-      <div class="module">Estrutura do RGPS <span>Organização do sistema</span></div>
-      <div class="module">Seguridade Social <span>Base constitucional</span></div>
-      <div class="module">Filiação e inscrição <span>Vínculo previdenciário</span></div>
-      <div class="module">Segurados obrigatórios <span>Quem contribui</span></div>
-      <div class="module">Empregado <span>Regime e enquadramento</span></div>
-      <div class="module">Empregado doméstico <span>Regras próprias</span></div>
-      <div class="module">Trabalhador avulso <span>Categoria previdenciária</span></div>
-      <div class="module">Contribuinte individual <span>Autônomos e prestadores</span></div>
-      <div class="module">Segurado especial <span>Rural e pesca artesanal</span></div>
-      <div class="module">Segurado facultativo <span>Contribuição voluntária</span></div>
-      <div class="module">Dependentes <span>Quem pode receber</span></div>
-      <div class="module">Qualidade de segurado <span>Manutenção e perda</span></div>
-      <div class="module">Período de graça <span>Proteção após cessar contribuição</span></div>
-      <div class="module">Contribuições previdenciárias <span>Recolhimento e lógica</span></div>
-      <div class="module">Tempo e carência <span>Contagem essencial</span></div>
-    </div>
+            <div class="modules-grid">
+                <div class="module-card">
+                    <div class="module-number">1</div>
+                    <h3>Noções iniciais sobre Previdência Social</h3>
+                    <ul class="module-topics">
+                        <li>Estrutura do RGPS</li>
+                        <li>Seguridade Social</li>
+                        <li>Filiação e inscrição</li>
+                    </ul>
+                </div>
 
-  </div>
-</section>
+                <div class="module-card">
+                    <div class="module-number">2</div>
+                    <h3>Segurados obrigatórios</h3>
+                    <ul class="module-topics">
+                        <li>Empregado</li>
+                        <li>Empregado doméstico</li>
+                        <li>Trabalhador avulso</li>
+                    </ul>
+                </div>
 
-<section>
-  <div class="wrap">
-    <div class="center">
-      <div class="kicker">Para quem é</div>
-      <h2 class="title">Criado para quem precisa organizar os fundamentos.</h2>
-    </div>
+                <div class="module-card">
+                    <div class="module-number">3</div>
+                    <h3>Contribuinte individual e especiais</h3>
+                    <ul class="module-topics">
+                        <li>Contribuinte individual</li>
+                        <li>Segurado especial</li>
+                        <li>Segurado facultativo</li>
+                        <li>Dependentes</li>
+                    </ul>
+                </div>
 
-    <div class="audience">
-      <article class="card">
-        <div class="badge">A</div>
-        <h3>Advogados iniciantes</h3>
-        <p>Especialmente quem acabou de tirar a OAB e ainda não sabe por onde começar.</p>
-      </article>
+                <div class="module-card">
+                    <div class="module-number">4</div>
+                    <h3>Qualidade de segurado</h3>
+                    <ul class="module-topics">
+                        <li>Período de graça</li>
+                        <li>Contribuições previdenciárias</li>
+                        <li>Tempo de contribuição e carência</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      <article class="card">
-        <div class="badge">B</div>
-        <h3>Advogados de outras áreas</h3>
-        <p>Para quem atua em trabalhista, cível ou consumidor e quer migrar para o Previdenciário.</p>
-      </article>
+    <!-- Target Audience Section -->
+    <section class="audience-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Para quem é este curso?</h2>
+                <p>O Previdenciário do Zero foi criado para quem precisa organizar os fundamentos antes de avançar para a prática.</p>
+            </div>
 
-      <article class="card">
-        <div class="badge">C</div>
-        <h3>Estudantes e bacharéis</h3>
-        <p>Para quem deseja sair da teoria solta e entender a estrutura previdenciária.</p>
-      </article>
+            <div class="audience-grid">
+                <div class="audience-card">
+                    <div class="audience-icon">
+                        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                    </div>
+                    <h3>Advogados iniciantes</h3>
+                    <p>Especialmente quem acabou de tirar a OAB e ainda não sabe por onde começar.</p>
+                </div>
 
-      <article class="card">
-        <div class="badge">D</div>
-        <h3>Profissionais inseguros</h3>
-        <p>Para quem quer atender melhor clientes com dúvidas sobre INSS.</p>
-      </article>
-    </div>
-  </div>
-</section>
+                <div class="audience-card">
+                    <div class="audience-icon">
+                        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                    </div>
+                    <h3>Advogados de outras áreas</h3>
+                    <p>Para quem atua em trabalhista, cível ou consumidor e quer migrar para o Previdenciário.</p>
+                </div>
 
-<section>
-  <div class="wrap teacher">
+                <div class="audience-card">
+                    <div class="audience-icon">
+                        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-5.04-6.71l-2.75 3.54-1.3-1.54c-.3-.36-.77-.36-1.07 0-.3.36-.3.94 0 1.3l1.98 2.36c.3.36.77.36 1.07 0L17.11 9c.3-.36.3-.94 0-1.3-.3-.36-.77-.36-1.07 0z"/></svg>
+                    </div>
+                    <h3>Estudantes e bacharéis</h3>
+                    <p>Para quem deseja sair da teoria solta e entender a estrutura previdenciária.</p>
+                </div>
 
-    <div class="teacher-photo">
-      <img
-        class="foto-professor"
-        src="https://github.com/profpaulohenriquemaceio/previdenciariodozero/blob/main/foto-paulo.jpeg?raw=true"
-        alt="Paulo Henrique Maranhão Pontes">
-    </div>
+                <div class="audience-card">
+                    <div class="audience-icon">
+                        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>
+                    </div>
+                    <h3>Profissionais inseguros</h3>
+                    <p>Para quem quer atender melhor clientes com dúvidas sobre INSS.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="teacher-copy">
-      <div class="kicker">Seu professor</div>
+    <!-- Professor Section -->
+    <section class="professor-section" id="professor">
+        <div class="container">
+            <div class="professor-content">
+                <div class="professor-image">
+                    <img src="https://github.com/profpaulohenriquemaceio/previdenciariodozero/blob/main/foto-paulo.jpeg?raw=true" alt="Prof. Paulo Henrique Maranhão Pontes">
+                </div>
+                <div class="professor-info">
+                    <h2>Quem será seu professor?</h2>
+                    <div class="professor-text">
+                        <p>Meu nome é <strong style="color: var(--primary);">Paulo Henrique Maranhão Pontes</strong>, advogado inscrito na <strong>OAB/AL nº 21.328</strong>.</p>
+                        <p>Ao longo da minha trajetória, aprofundei meus estudos no sistema previdenciário brasileiro e também exerço atuação em julgamento administrativo previdenciário, analisando recursos e processos relacionados a benefícios do INSS.</p>
+                        <p>Percebi que muitos profissionais querem atuar no Previdenciário, mas começam pela prática sem dominar os fundamentos. Este curso foi criado para resolver exatamente essa lacuna.</p>
+                    </div>
 
-      <h2>Paulo Henrique Maranhão Pontes</h2>
+                    <div class="credentials">
+                        <div class="credential-card">
+                            <div class="credential-header">
+                                <svg class="credential-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                                <strong>OAB/AL</strong>
+                            </div>
+                            <p>Inscrição nº 21.328</p>
+                        </div>
+                        <div class="credential-card">
+                            <div class="credential-header">
+                                <svg class="credential-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                                <strong>Especialista</strong>
+                            </div>
+                            <p>Atuação previdenciária</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      <p>
-        Advogado inscrito na OAB/AL nº 21.328, com trajetória de estudo aprofundado no sistema
-        previdenciário brasileiro e atuação em julgamento administrativo previdenciário, analisando
-        recursos e processos relacionados a benefícios do INSS.
-      </p>
+    <!-- Objections Section -->
+    <section class="objections-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Objeções comuns</h2>
+                <p>Antes de decidir, veja se alguma dessas dúvidas também passa pela sua cabeça.</p>
+            </div>
 
-      <p>
-        O curso foi criado para resolver uma lacuna comum: muitos profissionais querem atuar no
-        Previdenciário, mas começam pela prática sem dominar os fundamentos.
-      </p>
+            <div class="objections-grid">
+                <div class="objection-card">
+                    <div class="objection-header">
+                        <svg class="objection-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        <h3>Eu nunca estudei Previdenciário.</h3>
+                    </div>
+                    <p>Ótimo. O curso foi criado justamente para quem está começando.</p>
+                </div>
 
-      <div class="chips">
-        <span class="chip">Advogado OAB/AL 21.328</span>
-        <span class="chip">Atuação previdenciária</span>
-        <span class="chip">Julgamento administrativo</span>
-      </div>
-    </div>
+                <div class="objection-card">
+                    <div class="objection-header">
+                        <svg class="objection-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        <h3>Tenho medo de não conseguir acompanhar.</h3>
+                    </div>
+                    <p>As aulas seguem uma sequência lógica, progressiva e didática.</p>
+                </div>
 
-  </div>
-</section>
+                <div class="objection-card">
+                    <div class="objection-header">
+                        <svg class="objection-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        <h3>Não tenho experiência prática.</h3>
+                    </div>
+                    <p>Antes da prática, você precisa construir a base. Esse é o primeiro passo.</p>
+                </div>
 
-<section>
-  <div class="wrap">
-    <div class="center">
-      <div class="kicker">Objeções comuns</div>
-      <h2 class="title">Antes de decidir, veja se alguma dessas dúvidas também passa pela sua cabeça.</h2>
-    </div>
+                <div class="objection-card">
+                    <div class="objection-header">
+                        <svg class="objection-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        <h3>Será que o Previdenciário é para mim?</h3>
+                    </div>
+                    <p>Você só descobrirá quando finalmente compreender como o sistema funciona.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="faq">
-      <div class="faq-item">
-        <h3>“Eu nunca estudei Previdenciário.”</h3>
-        <p>Ótimo. O curso foi criado justamente para quem está começando.</p>
-      </div>
+    <!-- Benefits Section -->
+    <section class="benefits-section" id="benefits">
+        <div class="container">
+            <div class="section-header">
+                <h2>O que está incluído</h2>
+                <p>Acesso imediato ao conteúdo completo</p>
+            </div>
 
-      <div class="faq-item">
-        <h3>“Tenho medo de não conseguir acompanhar.”</h3>
-        <p>As aulas seguem uma sequência lógica, progressiva e didática.</p>
-      </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <h3>21 aulas gravadas</h3>
+                    <p>Conteúdo completo e organizado</p>
+                </div>
 
-      <div class="faq-item">
-        <h3>“Não tenho experiência prática.”</h3>
-        <p>Antes da prática, você precisa construir a base. Esse é o primeiro passo.</p>
-      </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M11.99 5V1h-1v4H8.01V1H7v4H3.99V1h-1v4H1v1h2v3H1v1h2v3H1v1h2v3H1v1h2v4h1v-4h3.99v4h1v-4h3v4h1v-4h4v-1h-4v-3h4v-1h-4v-3h4V9h-4V5h4V4h-4zm-1 4h-3v3h3V9zm0 4h-3v3h3v-3z"/></svg>
+                    </div>
+                    <h3>Acesso por 12 meses</h3>
+                    <p>Tempo suficiente para aprender e revisar</p>
+                </div>
 
-      <div class="faq-item">
-        <h3>“Será que o Previdenciário é para mim?”</h3>
-        <p>Você só descobrirá quando finalmente compreender como o sistema funciona.</p>
-      </div>
-    </div>
-  </div>
-</section>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                    </div>
+                    <h3>Certificado de conclusão</h3>
+                    <p>Reconhecimento do aprendizado</p>
+                </div>
 
-<section class="offer" id="oferta">
-  <div class="wrap">
-    <div class="offer-box">
-      <div class="kicker">Oferta de lançamento</div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+                    </div>
+                    <h3>Bônus exclusivo</h3>
+                    <p>Aula extra sobre primeiros honorários</p>
+                </div>
+            </div>
 
-      <h2>Entre pela porta certa.</h2>
+            <div class="bonus-box">
+                <div class="bonus-header">
+                    <svg class="bonus-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+                    <h3>Bônus: O caminho para os primeiros honorários previdenciários</h3>
+                </div>
+                <p>Uma aula extra para entender o papel do CNIS, PRISMA, atendimento previdenciário, oportunidades de atuação e próximos passos para avançar na área.</p>
+            </div>
+        </div>
+    </section>
 
-      <p>
-        Acesso imediato ao conteúdo, 21 aulas gravadas, 12 meses de acesso e certificado de conclusão.
-      </p>
+    <!-- Pricing Section -->
+    <section class="pricing-section" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2>Oferta de lançamento</h2>
+                <p>Investimento acessível para transformar sua carreira jurídica</p>
+            </div>
 
-      <div class="included">
-        <div>Acesso imediato</div>
-        <div>21 aulas gravadas</div>
-        <div>12 meses de acesso</div>
-        <div>Certificado</div>
-      </div>
+            <div class="pricing-card">
+                <div class="discount-badge">
+                    <span>⚡</span>
+                    <span>76% OFF</span>
+                </div>
 
-      <div class="offer-price">
-        <div class="old">De R$ 197,00</div>
-        <div class="price">R$ 47,00</div>
-        <p>Pagamento único. Acesso imediato.</p>
-      </div>
+                <div class="pricing-display">
+                    <div class="pricing-values">
+                        <span class="original-price">R$ 197,00</span>
+                        <span class="final-price">R$ 47,00</span>
+                    </div>
+                    <p class="pricing-info">Pagamento único. Acesso imediato.</p>
+                </div>
 
-      <a class="btn btn-primary" href="https://hotmart.com/pt-br/marketplace/produtos/hagsxd-previdenciario-do-zero-l7vwd/U106159257S">
-        Quero garantir meu acesso
-      </a>
-    </div>
-  </div>
-</section>
+                <div class="pricing-buttons">
+                    <a href="https://hotmart.com/pt-br/marketplace/produtos/hagsxd-previdenciario-do-zero-l7vwd/U106159257S" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
+                        Quero garantir meu acesso →
+                    </a>
+                    <a href="https://wa.me/5582991213400" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-lg">
+                        Tirar dúvidas antes de comprar
+                    </a>
+                </div>
 
-<section>
-  <div class="wrap split">
-    <div class="panel">
-      <div class="kicker">Bônus</div>
-      <h2>O caminho para os primeiros honorários previdenciários</h2>
-    </div>
+                <div class="trust-indicators">
+                    <div class="trust-item">
+                        <svg class="trust-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        <span>Acesso imediato</span>
+                    </div>
+                    <div class="trust-item">
+                        <svg class="trust-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        <span>Garantia de satisfação</span>
+                    </div>
+                    <div class="trust-item">
+                        <svg class="trust-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        <span>Suporte especializado</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="panel">
-      <p>
-        Uma aula extra para entender o papel do CNIS, PRISMA, atendimento previdenciário,
-        oportunidades de atuação e próximos passos para avançar na área.
-      </p>
-    </div>
-  </div>
-</section>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Ainda ficou com dúvidas?</h3>
+                    <p>Fale pelo WhatsApp antes de fazer sua inscrição. O atendimento é direto para esclarecer dúvidas sobre o curso, acesso, conteúdo e próxima etapa.</p>
+                    <a href="https://wa.me/5582991213400" target="_blank" rel="noopener noreferrer" class="btn btn-lg">
+                        💬 Falar com atendimento especializado
+                    </a>
+                </div>
 
-<section class="final">
-  <div class="wrap">
-    <h2>Com base bem feita, a prática não tem erro.</h2>
+                <div class="footer-section">
+                    <h3>Próximos passos</h3>
+                    <p>Com base bem feita, a prática não tem erro. O Previdenciário do Zero é a porta de entrada para sua jornada no Direito Previdenciário e a preparação ideal para avançar depois para a Mentoria Cosmos Previdenciário.</p>
+                    <a href="https://hotmart.com/pt-br/marketplace/produtos/hagsxd-previdenciario-do-zero-l7vwd/U106159257S" target="_blank" rel="noopener noreferrer" class="btn btn-lg">
+                        Começar agora
+                    </a>
+                </div>
+            </div>
 
-    <p>
-      O Previdenciário do Zero é a porta de entrada para sua jornada no Direito Previdenciário
-      e a preparação ideal para avançar depois para a Mentoria Cosmos Previdenciário.
-    </p>
+            <div class="footer-bottom">
+                <p>PH Pontes Advocacia | Paulo Henrique Maranhão Pontes | OAB/AL 21.328</p>
+                <div class="footer-links">
+                    <a href="https://wa.me/5582991213400" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                    <span>•</span>
+                    <span>Previdenciário do Zero © 2024</span>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-    <div class="hero-actions" style="justify-content:center">
-      <a class="btn btn-primary" href="https://hotmart.com/pt-br/marketplace/produtos/hagsxd-previdenciario-do-zero-l7vwd/U106159257S">
-        Começar agora
-      </a>
+    <script>
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && document.querySelector(href)) {
+                    e.preventDefault();
+                    document.querySelector(href).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
 
-      <a class="btn btn-secondary" href="https://wa.me/5582991213400">
-        Falar com atendimento especializado
-      </a>
-    </div>
-  </div>
-</section>
-
-</main>
-
-<footer>
-  PH Pontes Advocacia | Paulo Henrique Maranhão Pontes | OAB/AL 21.328
-  <br>
-  © 2026 - Todos os direitos reservados.
-</footer>
-
+        // Button animation
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                this.style.transform = 'scale(0.97)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                }, 150);
+            });
+        });
+    </script>
 </body>
 </html>
-```
